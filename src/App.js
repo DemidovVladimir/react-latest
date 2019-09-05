@@ -1,24 +1,28 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import User from './User';
-import UserContext from './UserContext';
+import User from './User'
+import { UserProvider } from './UserContext'
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       name: 'Vladimir'
     }
   }
 
+  changeName(newName) {
+    this.setState({
+      name: newName
+    })
+  }
+
   render() {
     return (
-      <div>
+      <UserProvider>
         <h1>Hello World.</h1>
-          <UserContext.Provider value={this.state}>
-              <User></User>
-          </UserContext.Provider>
-      </div>
+        <User></User>
+      </UserProvider>
     )
   }
 }
