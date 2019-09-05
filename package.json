@@ -1,5 +1,5 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-latest-template",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -19,14 +19,9 @@
   "author": "",
   "license": "ISC",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avanslaars/egghead-react-boilerplate.git"
+    "type": "git"
   },
   "keywords": [],
-  "bugs": {
-    "url": "https://github.com/avanslaars/egghead-react-boilerplate/issues"
-  },
-  "homepage": "https://github.com/avanslaars/egghead-react-boilerplate#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
