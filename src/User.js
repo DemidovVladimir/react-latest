@@ -1,23 +1,23 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
-import UserContext from './UserContext';
+import React from 'react'
+import { UserConsumer } from './UserContext'
 
-class User extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export default class User extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    componentDidMount() {}
+  componentDidMount() {}
 
-    render() {
-        return (
-            <UserContext.Consumer>
-                {user => (
-                    <h2>Loged in User: {user.name}</h2>
-                )}
-            </UserContext.Consumer>
-        )
-    }
+  render() {
+    return (
+      <UserConsumer>
+        {({ user, changeUser }) => (
+          <>
+            <h2>Loged in User: {user}</h2>
+            <button onClick={() => changeUser('Fedor')}>Change name</button>
+          </>
+        )}
+      </UserConsumer>
+    )
+  }
 }
-
-export default hot(module)(User)
